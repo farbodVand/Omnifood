@@ -84,11 +84,36 @@ html {
 
 .heading-primary {
   font-size: 5.2rem;
-  font-weight: 700;
   line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-primary,
+.heading-secondary {
+  font-weight: 700;
   color: #333;
   letter-spacing: -0.5px;
-  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  margin-bottom: 7.2rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 2rem 0;
+
+}
+
+.subheading {
+  display: block;
+  text-transform: uppercase;
+  color: #e67e22;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5;
 }
 
 
@@ -254,15 +279,70 @@ html {
   .btn:visited {
     margin-top: 1rem;
   }
+
+  .section-how {
+    margin: 0 3rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.5rem;
+  }
 }
 
 
 /*******************************/
 /* HOW IT WORKS SECTION */
 /*******************************/
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-img {
+  width: 35%;
+  
+}
+
+.step-number {
+  font-size: 6.6rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
 
 .section-how {
-  display: flex;
+  padding: 9.6rem 0;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1;
 }
 
 
@@ -272,6 +352,8 @@ html {
 
 .grid {
   display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
 }
 
 .grid--2-cols {
@@ -281,6 +363,7 @@ html {
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
 }
+
 
 .container {
   max-width: 120rem;
